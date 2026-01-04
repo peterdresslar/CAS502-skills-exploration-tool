@@ -28,7 +28,9 @@ def build_skills_graph(path_to_skills):
     df = pd.read_excel(path_to_skills)
 
     # only use skills with importance greater than 2.5
-    filtered_df = df[df['Scale ID'] == 'IM'][df['Data Value'] > 2.5]
+    ## (note: to suppress warning,
+    ## add a mask ala https://stackoverflow.com/questions/41710789/boolean-series-key-will-be-reindexed-to-match-dataframe-index)
+    filtered_df = df[(df['Scale ID'] == 'IM') & (df['Data Value'] > 2.5)]
     filtered_df = filtered_df.reset_index()
     
     # group data by O*NET-SOC Code so we can then iterate over each skill in each occupation
