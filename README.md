@@ -40,6 +40,29 @@ This folder contains a number of data files. The files have been downloaded from
   - `Occupation Data.xlsx`: Descriptions for each occupation.
   - `TechnologySkills.xlsx`: A list of technological skills for each occupation.
 
+## Updated for UV compatibility
+
+This starter repo has been updated to be easy to manage and run using the [uv package manager](https://docs.astral.sh/uv). If you have `uv` [installed and configured](https://docs.astral.sh/uv/getting-started/installation/) on your system, a great first step is to create and activate a virtual environment where your project will run:
+
+```bash
+uv venv
+# if on mac
+source .venv/bin/activate
+# windows command prompt
+.\.venv\Scripts\activate.bat
+```
+The packages are already listed in the pyproject project description. Install them with 
+
+```bash
+uv sync
+```
+
+Finally, you are ready to run. You can easily do this with:
+
+```bash
+uv run skills.py
+```
+
 ## Notes
 
 This repository is intentially left pretty barebone, so you can use it for all the assignments in CAS502.
