@@ -29,7 +29,8 @@ def build_skills_graph(path_to_skills):
 
     # only use skills with importance greater than 2.5
     ## (note: to suppress warning,
-    ## add a mask ala https://stackoverflow.com/questions/41710789/boolean-series-key-will-be-reindexed-to-match-dataframe-index)
+    ## added a mask ala https://stackoverflow.com/questions/41710789/boolean-series-key-will-be-reindexed-to-match-dataframe-index)
+    ## you might want to delete this comment once you've verified the code works
     filtered_df = df[(df['Scale ID'] == 'IM') & (df['Data Value'] > 2.5)]
     filtered_df = filtered_df.reset_index()
     

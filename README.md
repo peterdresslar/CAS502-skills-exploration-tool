@@ -59,7 +59,7 @@ The packages are already listed in the pyproject project description. Install th
 uv sync
 ```
 
-Finally, you are ready to run. You can easily do this with:
+Finally, you are ready to run. You can use the standard `python` command from above, or use the configured uv runner: this will ensure that the command runs in the configured environment with the required dependencies:
 
 ```bash
 uv run skills.py
